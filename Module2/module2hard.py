@@ -11,23 +11,14 @@ while 1 > 0:
     for j in list2:
         one_ = random.choice(list2)
         two_ = random.choice(list2)
-        # print(one_, two_)
         break
-
     str1 = str(one_)
     str2 = str(two_)
-    # print(str1, str2)
     paste2 = str1 + str2
     paste2 = int(paste2)
-    # print(type(paste2))
-    # print(paste2)
-
     sum_ = (one_+two_)
-    # print(sum_)
 
     if paste1 % sum_ == 0:
-        # proverka = paste2 % paste1
-        # print(proverka)
-        print('2-е поле:', paste2)  # , '    Сумма чисел 2-го поля =', sum_)
+        print('2-е поле:', paste2)
         print('Сумма чисел 2-го поля =', sum_)
         break
