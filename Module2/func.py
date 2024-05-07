@@ -1,9 +1,8 @@
-def print_params():
-    grade = [1, 2, 3, 4, 5]
-    print('Оценки', grade[0:5:2])
-    print('Оценки', grade)
+def print_params(fruit):
+    print('В корзине', fruit)
+    print('В корзине', fruit)
 
 
-print_params()
-print_params()
-print_params()
+print_params('Яблоко')
+print_params('Банан')
+print_params('Апельсин')
