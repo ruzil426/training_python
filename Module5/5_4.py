@@ -1,13 +1,10 @@
 class Building:
     total = 0
-
     def __init__(self):
-        self.total
-        self.plus()
+        Building.total += 1
 
-    def plus(self):
-        for i in range(40):
-            self.total += 1
-            print(f'Дом {self.total}')
+for i in range(40):
+    Building()
+    print(f'Дом {Building.total}')
 
 house = Building()
