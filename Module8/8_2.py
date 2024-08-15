@@ -1,7 +1,6 @@
 def personal_sum(numbers):
     result = 0
     numb_of_elem = 0
-    global incorrect_data
     incorrect_data = 0
     try:
         for number in numbers:
