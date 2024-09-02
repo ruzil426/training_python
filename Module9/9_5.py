@@ -28,10 +28,10 @@ class Iterator:
             for i in self:
                 print(i, end=' ')
         except StepValueError:
-            print('\n')
+            print()
 
 iter1 = Iterator(100, 200, 0)
 iter2 = Iterator(-5, 1)
 iter3 = Iterator(6, 15, 2)
 iter4 = Iterator(5, 1, -1)
-iter5 = Iterator(10, 1, 0)
+iter5 = Iterator(10, 1)
