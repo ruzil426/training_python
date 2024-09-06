@@ -21,9 +21,6 @@ class Knight(Thread):
 first_knight = Knight('Sir Lancelot', 10)
 second_knight = Knight("Sir Galahad", 20)
 
-thread1 = Thread(target=first_knight, args=())
-thread2 = Thread(target=second_knight, args=())
-
 first_knight.start()
 second_knight.start()
 
