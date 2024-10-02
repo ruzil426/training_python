@@ -1,6 +1,6 @@
 import sqlite3
 
-connetion = sqlite3.connect('not_telegram.db')
+connetion = sqlite3.connect('not_telegram1.db')
 cursor = connetion.cursor()
 
 cursor.execute('''
