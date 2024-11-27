@@ -20,6 +20,7 @@ from task2.views import index, index2
 # from task3.views import shop, pets, basket
 from task4.views import shop, pets, basket
 from django.views.generic import TemplateView
+from task5.views import sign_up_by_html, sign_up_by_django
 
 
 urlpatterns = [
@@ -28,5 +29,7 @@ urlpatterns = [
     path('index2/', index2.as_view()),
     path('', shop),
     path('pets', pets),
-    path('basket', basket)
+    path('basket', basket),
+    path('sign_up_by_html', sign_up_by_html),
+    path('sign_up_by_django', sign_up_by_django)
 ]
