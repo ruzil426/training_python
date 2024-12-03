@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 from .forms import UserRegister
 from .models import *
 
@@ -14,10 +15,18 @@ def shop(request):
 
 def games(request):
     title = 'Игры'
+    if not (per_page := request.POST.get('per_page')):
+        per_page = request.GET.get('per_page')
+    per_page = int(per_page) if per_page is not None and per_page.isdigit() else 3
     all_games = Game.objects.all()
+    paginator = Paginator(all_games, per_page)
+    page_number = request.GET.get('page') #получаем номер страницы, на которую переходит пользователь
+    page_games = paginator.get_page(page_number) # получаем посты для текущей страницы
+
     context = {
         'title': title,
-        'all_games': all_games
+        'all_games': all_games,
+        'page_games': page_games,
     }
     return render(request, 'games_page.html', context)
 
